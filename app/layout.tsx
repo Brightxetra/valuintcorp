@@ -1,101 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
-import "./site.css";
-
-const tailwindConfig = `
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "background": "#f7f9fb",
-        "on-surface": "#191c1e",
-        "outline": "#76777d",
-        "surface-container-lowest": "#ffffff",
-        "outline-variant": "#c6c6cd",
-        "on-tertiary-fixed": "#271900",
-        "inverse-on-surface": "#eff1f3",
-        "on-secondary": "#ffffff",
-        "on-primary-container": "#7c839b",
-        "surface-container": "#eceef0",
-        "surface-container-low": "#f2f4f6",
-        "inverse-surface": "#2d3133",
-        "on-surface-variant": "#45464d",
-        "on-secondary-fixed": "#002113",
-        "on-primary": "#ffffff",
-        "tertiary-fixed-dim": "#fabc45",
-        "on-tertiary": "#ffffff",
-        "surface": "#f7f9fb",
-        "surface-container-high": "#e6e8ea",
-        "on-primary-fixed-variant": "#3f465c",
-        "primary-fixed-dim": "#bec6e0",
-        "on-primary-fixed": "#131b2e",
-        "surface-bright": "#f7f9fb",
-        "secondary": "#006c49",
-        "on-tertiary-container": "#ad7b00",
-        "error-container": "#ffdad6",
-        "on-secondary-fixed-variant": "#005236",
-        "surface-dim": "#d8dadc",
-        "surface-variant": "#e0e3e5",
-        "surface-tint": "#565e74",
-        "on-error-container": "#93000a",
-        "secondary-container": "#6cf8bb",
-        "primary-fixed": "#dae2fd",
-        "tertiary-fixed": "#ffdea9",
-        "tertiary": "#000000",
-        "surface-container-highest": "#e0e3e5",
-        "on-error": "#ffffff",
-        "tertiary-container": "#271900",
-        "on-secondary-container": "#00714d",
-        "on-background": "#191c1e",
-        "primary-container": "#131b2e",
-        "inverse-primary": "#bec6e0",
-        "secondary-fixed-dim": "#4edea3",
-        "secondary-fixed": "#6ffbbe",
-        "error": "#ba1a1a",
-        "on-tertiary-fixed-variant": "#5f4100",
-        "primary": "#000000"
-      },
-      borderRadius: {
-        DEFAULT: "0.25rem",
-        lg: "0.5rem",
-        xl: "0.75rem",
-        full: "9999px"
-      },
-      spacing: {
-        gutter: "24px",
-        "container-max": "1200px",
-        unit: "8px",
-        "margin-mobile": "20px",
-        "margin-desktop": "64px"
-      },
-      fontFamily: {
-        "body-lg": ["Plus Jakarta Sans"],
-        "body-md": ["Plus Jakarta Sans"],
-        "headline-xl-mobile": ["Plus Jakarta Sans"],
-        "headline-md": ["Plus Jakarta Sans"],
-        "headline-lg": ["Plus Jakarta Sans"],
-        "headline-xl": ["Plus Jakarta Sans"],
-        "display-lg": ["Plus Jakarta Sans"],
-        "label-md": ["Plus Jakarta Sans"],
-        "headline-lg-mobile": ["Plus Jakarta Sans"]
-      },
-      fontSize: {
-        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-        "headline-xl-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
-        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
-        "headline-lg": ["32px", { lineHeight: "1.25", letterSpacing: "0", fontWeight: "700" }],
-        "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "0", fontWeight: "700" }],
-        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "0", fontWeight: "700" }],
-        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }],
-        "headline-lg-mobile": ["24px", { lineHeight: "1.25", fontWeight: "700" }]
-      }
-    }
-  }
-}
-`;
+import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -103,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Valuintcorp",
   },
   description:
-    "Valuintcorp membantu UMKM mengelola akuntansi, pajak, payroll, dan operasional keuangan dengan lebih rapi.",
+    "Bookkeeping dan advisory keuangan untuk UMKM yang ingin tumbuh lebih tertata.",
 };
 
 export default function RootLayout({
@@ -112,17 +18,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" suppressHydrationWarning>
-      <body>
-        {children}
-        <Script id="tailwind-config" strategy="beforeInteractive">
-          {tailwindConfig}
-        </Script>
-        <Script
-          src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
-          strategy="beforeInteractive"
-        />
-        <Script src="/assets/site.js" strategy="afterInteractive" />
+    <html lang="id">
+      <body className="font-sans bg-background text-on-surface antialiased flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-grow pt-20">{children}</main>
+        <Footer />
+        <a
+          aria-label="Chat dengan Valuintcorp"
+          className="group fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-on-secondary shadow-xl shadow-emerald-900/20 transition-transform duration-300 hover:scale-105 md:bottom-8 md:right-8 md:h-16 md:w-16"
+          href="/kontak"
+          title="Chat dengan Valuintcorp"
+        >
+          <svg
+            aria-hidden="true"
+            className="h-7 w-7 md:h-8 md:w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+            />
+          </svg>
+          <span className="pointer-events-none absolute right-full mr-4 hidden whitespace-nowrap rounded-lg bg-surface-container-highest px-3 py-1.5 text-sm font-medium text-on-surface opacity-0 shadow-md transition-opacity group-hover:opacity-100 md:block">
+            Chat dengan Valuintcorp
+          </span>
+        </a>
       </body>
     </html>
   );
