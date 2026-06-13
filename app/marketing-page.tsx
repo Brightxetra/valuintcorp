@@ -134,6 +134,10 @@ function extractBody(source: string) {
 
 function normalizeHtml(html: string) {
   return html
+    .replace(
+      /<script\b[^>]*src=(["'])(?:\.\.\/)?assets\/site\.js\1[^>]*><\/script>/gi,
+      "",
+    )
     .replaceAll("http://localhost:3000/login", ERP_LOGIN_URL)
     .replaceAll("https://valuintcorp.vercel.app/login", ERP_LOGIN_URL)
     .replaceAll("Â©", "&copy;")

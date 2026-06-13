@@ -1,125 +1,133 @@
 <!DOCTYPE html>
-
-<html class="light" lang="id"><head>
+<html lang="id">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Paket Harga | Valuintcorp</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "background": "#f7f9fb",
-                        "on-surface": "#191c1e",
-                        "outline": "#76777d",
-                        "surface-container-lowest": "#ffffff",
-                        "outline-variant": "#c6c6cd",
-                        "on-tertiary-fixed": "#271900",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-secondary": "#ffffff",
-                        "on-primary-container": "#7c839b",
-                        "surface-container": "#eceef0",
-                        "surface-container-low": "#f2f4f6",
-                        "inverse-surface": "#2d3133",
-                        "on-surface-variant": "#45464d",
-                        "on-secondary-fixed": "#002113",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed-dim": "#fabc45",
-                        "on-tertiary": "#ffffff",
-                        "surface": "#f7f9fb",
-                        "surface-container-high": "#e6e8ea",
-                        "on-primary-fixed-variant": "#3f465c",
-                        "primary-fixed-dim": "#bec6e0",
-                        "on-primary-fixed": "#131b2e",
-                        "surface-bright": "#f7f9fb",
-                        "secondary": "#006c49",
-                        "on-tertiary-container": "#ad7b00",
-                        "error-container": "#ffdad6",
-                        "on-secondary-fixed-variant": "#005236",
-                        "surface-dim": "#d8dadc",
-                        "surface-variant": "#e0e3e5",
-                        "surface-tint": "#565e74",
-                        "on-error-container": "#93000a",
-                        "secondary-container": "#6cf8bb",
-                        "primary-fixed": "#dae2fd",
-                        "tertiary-fixed": "#ffdea9",
-                        "tertiary": "#000000",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-error": "#ffffff",
-                        "tertiary-container": "#271900",
-                        "on-secondary-container": "#00714d",
-                        "on-background": "#191c1e",
-                        "primary-container": "#131b2e",
-                        "inverse-primary": "#bec6e0",
-                        "secondary-fixed-dim": "#4edea3",
-                        "secondary-fixed": "#6ffbbe",
-                        "error": "#ba1a1a",
-                        "on-tertiary-fixed-variant": "#5f4100",
-                        "primary": "#000000"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "container-max": "1200px",
-                        "unit": "8px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "body-lg": ["Plus Jakarta Sans"],
-                        "body-md": ["Plus Jakarta Sans"],
-                        "headline-xl-mobile": ["Plus Jakarta Sans"],
-                        "headline-md": ["Plus Jakarta Sans"],
-                        "headline-lg": ["Plus Jakarta Sans"],
-                        "headline-xl": ["Plus Jakarta Sans"],
-                        "label-md": ["Plus Jakarta Sans"],
-                        "headline-lg-mobile": ["Plus Jakarta Sans"]
-                    },
-                    "fontSize": {
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["24px", {"lineHeight": "1.25", "fontWeight": "700"}]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .ambient-shadow { box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.05); }
-        .ambient-shadow-hover { box-shadow: 0px 20px 40px rgba(15, 23, 42, 0.08); }
-    </style>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#f7f9fb",
+        "on-surface": "#191c1e",
+        outline: "#76777d",
+        "surface-container-lowest": "#ffffff",
+        "outline-variant": "#c6c6cd",
+        "inverse-on-surface": "#eff1f3",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#7c839b",
+        "surface-container": "#eceef0",
+        "surface-container-low": "#f2f4f6",
+        "inverse-surface": "#2d3133",
+        "on-surface-variant": "#45464d",
+        "on-secondary-fixed": "#002113",
+        "on-primary": "#ffffff",
+        "tertiary-fixed-dim": "#fabc45",
+        "on-tertiary": "#ffffff",
+        surface: "#f7f9fb",
+        "surface-container-high": "#e6e8ea",
+        "on-primary-fixed-variant": "#3f465c",
+        "primary-fixed-dim": "#bec6e0",
+        "on-primary-fixed": "#131b2e",
+        "surface-bright": "#f7f9fb",
+        secondary: "#006c49",
+        "on-tertiary-container": "#ad7b00",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#005236",
+        "surface-dim": "#d8dadc",
+        "surface-variant": "#e0e3e5",
+        "surface-tint": "#565e74",
+        "on-error-container": "#93000a",
+        "secondary-container": "#6cf8bb",
+        "primary-fixed": "#dae2fd",
+        "tertiary-fixed": "#ffdea9",
+        tertiary: "#000000",
+        "surface-container-highest": "#e0e3e5",
+        "on-error": "#ffffff",
+        "tertiary-container": "#271900",
+        "on-secondary-container": "#00714d",
+        "on-background": "#191c1e",
+        "primary-container": "#131b2e",
+        "inverse-primary": "#bec6e0",
+        "secondary-fixed-dim": "#4edea3",
+        "secondary-fixed": "#6ffbbe",
+        error: "#ba1a1a",
+        "on-tertiary-fixed-variant": "#5f4100",
+        primary: "#000000"
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px"
+      },
+      spacing: {
+        gutter: "24px",
+        "container-max": "1200px",
+        unit: "8px",
+        "margin-mobile": "16px",
+        "margin-desktop": "64px"
+      },
+      fontFamily: {
+        "body-lg": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        "headline-xl-mobile": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "display-lg": ["Plus Jakarta Sans"],
+        "label-md": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Plus Jakarta Sans"]
+      },
+      fontSize: {
+        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+        "headline-xl-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+        "headline-lg": ["32px", { lineHeight: "1.25", fontWeight: "700" }],
+        "headline-xl": ["48px", { lineHeight: "1.2", fontWeight: "700" }],
+        "display-lg": ["48px", { lineHeight: "1.1", fontWeight: "700" }],
+        "label-md": ["14px", { lineHeight: "1.4", fontWeight: "600" }],
+        "headline-lg-mobile": ["24px", { lineHeight: "1.25", fontWeight: "700" }]
+      }
+    }
+  }
+};
+</script>
+<link href="../assets/site.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased pt-20">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-inverse-surface bg-surface-container-lowest/90 backdrop-blur-md shadow-sm flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto left-0 right-0">
-<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface"><div class="flex items-center gap-3"><img alt="Valuintcorp" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/><span class="">Valuintcorp</span></div></div>
-<nav class="hidden md:flex gap-8 items-center font-body-md text-label-md">
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Home</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Layanan</a>
-<a class="text-secondary font-bold border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-200 opacity-80 transition-all" href="#">Paket Harga</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Tentang Kami</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Insight</a>
-<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">FAQ</a>
-</nav>
-<div class="hidden md:block"><a class="text-secondary border border-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-secondary/10 transition-colors inline-block" href="http://localhost:3000/login">
-                Login
-            </a>
-</div>
+<body class="site-page page-pricing bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<header class="site-header">
+  <div class="site-nav-shell">
+    <a class="site-brand" href="/">
+      <img alt="Valuintcorp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>
+      <span>Valuintcorp</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a class="site-nav-link" href="/">Home</a><a class="site-nav-link" href="/layanan">Layanan</a><a class="site-nav-link is-active" href="/paket-harga" aria-current="page">Paket Harga</a><a class="site-nav-link" href="/tentang-kami">Tentang Kami</a><a class="site-nav-link" href="/insight">Insight</a><a class="site-nav-link" href="/faq">FAQ</a><a class="site-nav-link" href="/kontak">Kontak</a>
+    </nav>
+    <div class="site-actions">
+      <a class="site-button secondary" href="https://valuintcorp-erp.vercel.app/login">Login</a>
+      <a class="site-button primary" href="/kontak">Konsultasi Gratis</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-navigation" data-nav-toggle>
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-navigation" aria-label="Navigasi mobile" data-mobile-nav>
+    <a href="/">Home</a><a href="/layanan">Layanan</a><a class="is-active" href="/paket-harga" aria-current="page">Paket Harga</a><a href="/tentang-kami">Tentang Kami</a><a href="/insight">Insight</a><a href="/faq">FAQ</a><a href="/kontak">Kontak</a>
+    <div class="mobile-actions">
+      <a href="https://valuintcorp-erp.vercel.app/login">Login ERP</a>
+      <a class="is-active" href="/kontak">Konsultasi Gratis</a>
+    </div>
+  </nav>
 </header>
 <main>
 <!-- Hero Section -->
@@ -163,7 +171,7 @@
 <span class="font-body-md text-body-md text-on-surface-variant">Rekonsiliasi 1 Rekening Bank</span>
 </li>
 </ul>
-<button class="w-full py-4 rounded-lg font-label-md text-label-md border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">Daftar Demo Gratis</button>
+<a href="/kontak" class="w-full py-4 rounded-lg font-label-md text-label-md border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors inline-flex items-center justify-center text-center">Daftar Demo Gratis</a>
 </div>
 <!-- Growth Card -->
 <div class="bg-surface-container-lowest rounded-xl ambient-shadow p-8 flex flex-col relative transform md:-translate-y-4 border-2 border-secondary">
@@ -197,7 +205,7 @@
 <span class="font-body-md text-body-md text-on-surface-variant">Sesi Review Bulanan (1 Jam)</span>
 </li>
 </ul>
-<button class="w-full py-4 rounded-lg font-label-md text-label-md bg-secondary text-on-secondary hover:opacity-90 transition-opacity">Daftar Demo Gratis</button>
+<a href="/kontak" class="w-full py-4 rounded-lg font-label-md text-label-md bg-secondary text-on-secondary hover:opacity-90 transition-opacity inline-flex items-center justify-center text-center">Daftar Demo Gratis</a>
 </div>
 <!-- Advisory Card -->
 <div class="bg-surface-container-lowest rounded-xl ambient-shadow p-8 flex flex-col hover:ambient-shadow-hover transition-shadow duration-300 border border-transparent hover:border-surface-variant">
@@ -228,7 +236,7 @@
 <span class="font-body-md text-body-md text-on-surface-variant">Sesi Advisory Intensif</span>
 </li>
 </ul>
-<button class="w-full py-4 rounded-lg font-label-md text-label-md border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">Daftar Demo Gratis</button>
+<a href="/kontak" class="w-full py-4 rounded-lg font-label-md text-label-md border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary transition-colors inline-flex items-center justify-center text-center">Daftar Demo Gratis</a>
 </div>
 </div>
 </section>
@@ -241,9 +249,7 @@
                         Kami memahami setiap bisnis memiliki keunikan. Diskusikan kebutuhan spesifik Anda dengan tim konsultan kami untuk merancang paket yang paling sesuai.
                     </p>
 </div>
-<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors whitespace-nowrap">
-                    Hubungi Kami
-                </button>
+<a href="/kontak" class="bg-surface-container-lowest text-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors whitespace-nowrap inline-flex items-center justify-center text-center">Hubungi Kami</a>
 </div>
 </section>
 <!-- Pricing Notes -->
@@ -253,42 +259,44 @@
             </p>
 </section>
 </main>
-<!-- BottomNavBar (FAB) -->
-<div class="fixed bottom-8 right-8 z-50 flex items-center justify-center">
-<button aria-label="Chat with an Expert" class="bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container font-label-md text-label-md fixed bottom-8 right-8 rounded-full w-16 h-16 shadow-xl flex items-center justify-center hover:scale-110 transition-transform duration-300">
-<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
-</button>
-</div>
-<!-- Footer -->
-<footer class="bg-surface-container-highest dark:bg-surface-container text-primary dark:text-inverse-primary font-body-md text-body-md w-full py-16 px-gutter bg-surface-container-highest dark:bg-surface-container-low mt-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
-<div class="col-span-1 md:col-span-1">
-<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface mb-6"><div class="flex items-center gap-3 mb-6"><img alt="Valuintcorp" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm" style="height: 40px;"/><span class="">Valuintcorp</span></div></div>
-<p class="text-on-surface-variant dark:text-outline text-sm">© 2024 Valuintcorp. All Rights Reserved.</p>
-</div>
-<div class="col-span-1">
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-4">Legal</h4>
-<ul class="space-y-3">
-<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
-<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a></li>
-</ul>
-</div>
-<div class="col-span-1">
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-4">Kontak</h4>
-<ul class="space-y-3">
-<li class="text-on-surface-variant dark:text-outline">Email: info@valuintcorp.com</li>
-<li class="text-on-surface-variant dark:text-outline">WhatsApp: +62 812-3456-7890</li>
-<li class="text-on-surface-variant dark:text-outline">Lokasi: Indonesia</li>
-</ul>
-</div>
-<div class="col-span-1">
-<h4 class="font-label-md text-label-md font-bold text-on-surface mb-4">Sosial Media</h4>
-<ul class="space-y-3">
-<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Instagram</a></li>
-<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">LinkedIn</a></li>
-<li class=""><a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">TikTok</a></li>
-</ul>
-</div>
-</div>
+<a class="fab" href="/kontak" aria-label="Chat dengan Valuintcorp">
+  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+  <span class="fab-tooltip">Chat dengan Valuintcorp</span>
+</a>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div>
+      <a class="footer-brand" href="/">
+        <img alt="Valuintcorp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>
+        <span>Valuintcorp</span>
+      </a>
+      <p>Partner bookkeeping & advisory keuangan terpercaya untuk pertumbuhan UMKM yang berkelanjutan.</p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Kebijakan Privasi</a></li>
+        <li><a href="#">Syarat & Ketentuan</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li><a href="mailto:info@valuintcorp.com">Email: info@valuintcorp.com</a></li>
+        <li><a href="https://wa.me/6281234567890">WhatsApp: +62 812-3456-7890</a></li>
+        <li>Lokasi: Indonesia</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sosial Media</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer-bottom">&copy; 2024 Valuintcorp. All Rights Reserved.</div>
 </footer>
-</body></html>
+</body>
+</html>

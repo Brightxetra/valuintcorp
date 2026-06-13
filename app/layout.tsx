@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "./site.css";
 
 const tailwindConfig = `
 tailwind.config = {
@@ -76,6 +77,7 @@ tailwind.config = {
         "headline-md": ["Plus Jakarta Sans"],
         "headline-lg": ["Plus Jakarta Sans"],
         "headline-xl": ["Plus Jakarta Sans"],
+        "display-lg": ["Plus Jakarta Sans"],
         "label-md": ["Plus Jakarta Sans"],
         "headline-lg-mobile": ["Plus Jakarta Sans"]
       },
@@ -86,6 +88,7 @@ tailwind.config = {
         "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
         "headline-lg": ["32px", { lineHeight: "1.25", letterSpacing: "0", fontWeight: "700" }],
         "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "0", fontWeight: "700" }],
+        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "0", fontWeight: "700" }],
         "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }],
         "headline-lg-mobile": ["24px", { lineHeight: "1.25", fontWeight: "700" }]
       }
@@ -119,6 +122,7 @@ export default function RootLayout({
           src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
           strategy="beforeInteractive"
         />
+        <Script src="/assets/site.js" strategy="afterInteractive" />
       </body>
     </html>
   );
