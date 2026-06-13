@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Layanan | Valuintcorp</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f7f9fb",
+                      "on-surface": "#191c1e",
+                      "outline": "#76777d",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c6c6cd",
+                      "on-tertiary-fixed": "#271900",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#7c839b",
+                      "surface-container": "#eceef0",
+                      "surface-container-low": "#f2f4f6",
+                      "inverse-surface": "#2d3133",
+                      "on-surface-variant": "#45464d",
+                      "on-secondary-fixed": "#002113",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#fabc45",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-bright": "#f7f9fb",
+                      "secondary": "#006c49",
+                      "on-tertiary-container": "#ad7b00",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#005236",
+                      "surface-dim": "#d8dadc",
+                      "surface-variant": "#e0e3e5",
+                      "surface-tint": "#565e74",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#6cf8bb",
+                      "primary-fixed": "#dae2fd",
+                      "tertiary-fixed": "#ffdea9",
+                      "tertiary": "#000000",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#271900",
+                      "on-secondary-container": "#00714d",
+                      "on-background": "#191c1e",
+                      "primary-container": "#131b2e",
+                      "inverse-primary": "#bec6e0",
+                      "secondary-fixed-dim": "#4edea3",
+                      "secondary-fixed": "#6ffbbe",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed-variant": "#5f4100",
+                      "primary": "#000000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-xl-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.25",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<nav class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight flex items-center gap-2" href="#"><img alt="Valuintcorp" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>Valuintcorp</a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Layanan</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Paket Harga</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Tentang Kami</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Insight</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">FAQ</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center border border-secondary text-secondary px-6 py-2.5 rounded-full font-label-md text-label-md hover:bg-secondary/5 transition-colors" href="http://localhost:3000/login">Login</a>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<header class="max-w-3xl mx-auto text-center px-gutter mb-20">
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6 leading-tight">
+                Layanan Bookkeeping dan Advisory untuk UMKM
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Solusi keuangan komprehensif yang dirancang khusus untuk memastikan bisnis Anda tumbuh dengan fondasi finansial yang kuat dan terukur.
+            </p>
+</header>
+<div class="space-y-24 max-w-container-max mx-auto px-gutter">
+<section class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.05)] relative group">
+<img alt="Monthly Bookkeeping" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, brightly lit modern office desk focusing on a person reviewing financial documents and accounting ledgers. The scene is shot from a top-down, neat perspective emphasizing organization and precision. Soft natural light filters in from a nearby window, casting gentle shadows that enhance the soft minimalist aesthetic. The color palette features crisp whites, subtle grays, and natural wood tones, reflecting a professional and reliable bookkeeping service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlzqZGOvHpAGpPcohz3nFbnCVSZM5_JUxlcU9c3U_3AfDYzFz6sne_nMxQ5gDvDkFn3D5cd58FWWhsUDHfez_mKJD0KvWbKPjFpYsHhcmQ7iWFDakx4KoAScUgI-OpEpKLdUwOH3I5L8dLqNQ0Kz0nJ0W6Ot7Lu9KSwkIAaSDC6hqh_W9i43pD426IgGnL7mUJlv09Ni7hAv_lGQvT53uExWPIgogiqOQlyrNEWcx64f5lwUYtWqKYN9ExMfVhYPaHVxMbDY_WFHX9"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                        Core Service
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Monthly Bookkeeping</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Pencatatan transaksi harian yang rapi dan akurat untuk memastikan tidak ada data keuangan yang terlewat. Kami mengelola tumpukan nota Anda menjadi data terstruktur.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">check_circle</span>
+                                Termasuk
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="">Pencatatan Jurnal Harian</li>
+<li class="">Rekonsiliasi Bank Bulanan</li>
+<li class="">Penyusunan Buku Besar</li>
+<li class="">Manajemen Hutang Piutang</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-weight="fill">target</span>
+                                Cocok Untuk
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-relaxed">
+                                UMKM Retail, F&amp;B, dan Jasa yang memiliki volume transaksi harian tinggi namun belum memiliki staf admin keuangan khusus.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.05)] relative group">
+<img alt="Financial Reporting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist digital presentation of financial charts and graphs displayed on a sleek laptop screen. The environment is a modern, light-filled workspace with a blurred background, focusing entirely on the crisp, colorful data visualization. The lighting is bright and even, highlighting the clear, professional aesthetic of modern financial reporting. The palette is dominated by neutral whites and silvers, punctuated by vibrant data points representing growth and clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB02H62K6EA7XLjHvCa2gVAPMArTp_wn4NYhZOYH2Cob6bUz_OY3XKDh-NLUFTeP4AiFUVGnlfV5mgrPUr4Pk5cXwKStXeuyoIX2lHTdrygqPIZcnR5qJ6YyHx9knlTV1TCZwwlEDI0paxP24UFyOV1kWJR_RKEwpb8QMW9w8IV31BN_4h4aWdGMSQ5zlEY2il4J1UhNSh6okmS3CWl0h_SZsRb_p2smZpxNloIOBbYmJQOTQZ7sGBaY8pXAMNr9D_8TcvLS-2lRNi"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+                        Core Service
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Financial Reporting</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Laporan keuangan bulanan komprehensif yang mudah dibaca. Didesain untuk memberikan insight langsung kepada pemilik bisnis dalam pengambilan keputusan strategis.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">check_circle</span>
+                                Termasuk
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="">Laporan Laba/Rugi (P&amp;L)</li>
+<li class="">Neraca Keuangan (Balance Sheet)</li>
+<li class="">Laporan Perubahan Modal</li>
+<li class="">Executive Summary Bulanan</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-weight="fill">target</span>
+                                Cocok Untuk
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Bisnis yang bersiap untuk scale-up, membutuhkan pendanaan dari bank/investor, atau ingin mengevaluasi profitabilitas secara akurat.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.05)] relative group">
+<img alt="Cash Flow Monitoring" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up view of hands holding a smartphone displaying a banking app interface with positive green indicators, symbolizing healthy cash flow. The phone is held over a clean, white marble desk surface. The overall lighting is soft, ambient, and high-key, conveying a sense of financial security and modern mobile management. Subtle hints of indoor plants in the blurred background add to the approachable, fresh aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_nqmACC3Ikdyvxeg9pbLaOXfsz2beLUQuNrPqC2vBRvfv3ucWr2A8X5riMsqP92NNnSuM4ftmGqmiRSp20Ji-UUynSm1I7nx0Wb85XpIV53jX5rEF1hMgGu8pdOfVsGv75qXsaJx2B-8V3pwHJdGgyCrFkiY3WzhlPm1FYN7JqANYlxsuR27D6tuQTeN55SwNmztleZsD9NJIZBESMUchGJjNy4VoEbu7WFEqq0rLjs3j7-lgF5h9eNcJsyVGBMbqATDmJvkdxMUQ"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+                        Advisory
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Cash Flow Monitoring</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Pantau pergerakan uang tunai Anda secara real-time. Kami membantu memproyeksikan arus kas ke depan agar bisnis Anda terhindar dari risiko kehabisan modal operasional.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">check_circle</span>
+                                Termasuk
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="">Laporan Arus Kas (Cash Flow)</li>
+<li class="">Proyeksi Kas 3-6 Bulan</li>
+<li class="">Analisis Tren Pengeluaran</li>
+<li class="">Alert Saldo Kritis</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-weight="fill">target</span>
+                                Cocok Untuk
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Startup, Agensi Kreatif, dan Perusahaan B2B dengan siklus pembayaran klien (terms of payment) yang panjang atau fluktuatif.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.05)] relative group">
+<img alt="Setup Sistem Pembukuan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A modern workspace showing multiple digital devices seamlessly syncing data, representing system setup and integration. A sleek tablet, a smartphone, and a laptop are visible on a minimal white desk. The screens display abstract cloud icons and loading bars. The scene is illuminated with cool, natural daylight, reflecting a tech-forward, organized, and reliable approach to digital financial transitions. The color palette emphasizes clean whites, deep tech-blues, and subtle grays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxKgWctpchL0ZSc9rgEsXiomNf2MdCmcaOPqsu4KGDNJ5tp7ZIJEDvVTYKcwdHkxl1XTEP8k7oo3rHUL5m6NLsVnXYpbqioCyddPlgz40T7FqQIRlFd9X_F1oU9bFPLb6uSyqZyp7HybjikCeDtCQLyghKLanBsaFxHLmpnGMluK-YAc-iXM6gg0kb4lE2snh-JAXYamWKS4Zi7xCp_FjLr223OWlNtKHWcS5n0hJi4oDOC3cE-wRECS2-5iQ2VVlAycRDt4JCbyN3"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">settings_suggest</span>
+                        Implementation
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Setup Sistem Pembukuan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Membangun fondasi tata kelola keuangan dari nol menggunakan software akuntansi cloud modern. Transisi mulus dari pencatatan manual ke sistem digital yang otomatis.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">check_circle</span>
+                                Termasuk
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="">Pemilihan Software (Xero/Jurnal)</li>
+<li class="">Desain Chart of Accounts (COA)</li>
+<li class="">Migrasi Data Awal (Opening Balance)</li>
+<li class="">Training Tim Internal Anda</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-weight="fill">target</span>
+                                Cocok Untuk
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Bisnis baru yang ingin rapi sejak awal, atau UMKM mapan yang lelah dengan pencatatan excel manual dan rentan error.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+<div class="w-full md:w-1/2 aspect-video md:aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(15,23,42,0.05)] relative group">
+<img alt="Business Financial Review" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Two professionals sitting across from each other in a bright, modern meeting room, intensely focused on a printed financial report laid out on the table between them. The setting suggests a consultative, strategic review session. Soft sunlight casts gentle shadows across the minimalist table. The mood is serious yet collaborative and approachable, highlighting the advisory nature of the financial review service. The aesthetic is clean corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbVt_zKCVsgT0yNBiPDe9WxTFKt6MPA0bh9S5ycro-itwzU67gkbkAXWhGGqdypSmkIDdJwX64cz9b09ERmIh7DnJ7hyfPGObHBkteDt-Hxu0tINqka_Sx_ZeUc3nR0znqPunWxKZZJMvd-IlNDk6V9MPZSCEqlGjfQTzY1BiosNjeH9ivF5H4i9DdEdZimC93m9wMSlvIm_-Sslh09zGcwjn3AZDnFzC3-jiL6VXFC835Vn_ZjQDMwByZ6a0hHxDpELi5EIqhR7lu"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md mb-4">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+                        Advisory
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Business Financial Review</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Audit internal dan analisis mendalam terhadap kesehatan finansial bisnis Anda. Kami mengidentifikasi inefisiensi, kebocoran biaya, dan peluang optimalisasi profit.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">check_circle</span>
+                                Termasuk
+                            </h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant text-sm">
+<li class="">Analisis Rasio Keuangan</li>
+<li class="">Identifikasi Cost Inefficiency</li>
+<li class="">Review Margin Profit Produk/Jasa</li>
+<li class="">Sesi Konsultasi Strategis 1-on-1</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" data-weight="fill">target</span>
+                                Cocok Untuk
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-relaxed">
+                                Pemilik bisnis yang merasa "omzet besar tapi uangnya tidak terlihat", atau bisnis yang sedang merencanakan ekspansi masif.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="max-w-4xl mx-auto px-gutter mt-32">
+<div class="bg-surface-container-highest rounded-2xl p-10 md:p-16 text-center shadow-[0_10px_40px_rgba(15,23,42,0.08)] relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-lowest/40 to-transparent pointer-events-none"></div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-4 relative z-10">Belum Tahu Layanan Mana yang Cocok?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto relative z-10">
+                    Ceritakan kondisi bisnis Anda, dan tim expert kami akan merekomendasikan solusi pembukuan dan advisory yang paling tepat untuk kebutuhan Anda saat ini.
+                </p>
+<a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-on-secondary-fixed-variant transition-transform hover:-translate-y-1 shadow-lg relative z-10 duration-300" href="#">
+                    Konsultasi Gratis
+                </a>
+</div>
+</section>
+</main>
+<footer class="w-full py-16 px-gutter bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant/20 mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Valuintcorp" class="h-[40px] w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Valuintcorp</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-6">Mitra terpercaya untuk pembukuan dan advisory keuangan UMKM Indonesia.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Informasi</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Kontak Kami</h4>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="">Email: info@entretonomics.com</li>
+<li class="">WhatsApp: +62 812-3456-7890</li>
+<li class="">Lokasi: Indonesia</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Sosial Media</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Instagram</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">LinkedIn</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">TikTok</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-outline-variant/20 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 Valuintcorp. All Rights Reserved.</p>
+</div>
+</footer>
+<a aria-label="Chat with an Expert" class="fixed bottom-8 right-8 z-50 flex items-center justify-center bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container rounded-full w-16 h-16 shadow-xl hover:scale-110 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+<span class="absolute right-20 bg-surface-container-highest text-on-surface px-4 py-2 rounded-lg text-sm font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-sm">
+            Chat with an Expert
+        </span>
+</a>
+</body></html>

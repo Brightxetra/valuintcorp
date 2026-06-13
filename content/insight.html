@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insight | Valuintcorp</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Provided) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-fixed": "#271900",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#7c839b",
+                    "surface-container": "#eceef0",
+                    "surface-container-low": "#f2f4f6",
+                    "inverse-surface": "#2d3133",
+                    "on-surface-variant": "#45464d",
+                    "on-secondary-fixed": "#002113",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#fabc45",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#006c49",
+                    "on-tertiary-container": "#ad7b00",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#005236",
+                    "surface-dim": "#d8dadc",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#565e74",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#6cf8bb",
+                    "primary-fixed": "#dae2fd",
+                    "tertiary-fixed": "#ffdea9",
+                    "tertiary": "#000000",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#271900",
+                    "on-secondary-container": "#00714d",
+                    "on-background": "#191c1e",
+                    "primary-container": "#131b2e",
+                    "inverse-primary": "#bec6e0",
+                    "secondary-fixed-dim": "#4edea3",
+                    "secondary-fixed": "#6ffbbe",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#5f4100",
+                    "primary": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.25", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .ambient-shadow { box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.05); }
+        .ambient-shadow-hover:hover { box-shadow: 0px 15px 40px rgba(15, 23, 42, 0.08); transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-3" href="#"><img alt="Valuintcorp Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>Valuintcorp</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Layanan</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Paket Harga</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">Tentang Kami</a>
+<!-- Active Item -->
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors duration-200 font-label-md text-label-md opacity-80" href="#">Insight</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="#">FAQ</a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:block"><a class="text-secondary border border-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-all inline-block" href="http://localhost:3000/login">Login</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-margin-desktop min-h-screen max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<!-- Hero Section -->
+<section class="text-center max-w-3xl mx-auto mb-16">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface mb-6">Insight Keuangan untuk UMKM</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                Temukan panduan, tips praktis, dan analisis ahli untuk membantu bisnis Anda tumbuh secara berkelanjutan. Dari pembukuan dasar hingga strategi pendanaan.
+            </p>
+<!-- Search Bar -->
+<div class="relative max-w-lg mx-auto mb-12">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-4 pl-12 pr-6 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-shadow ambient-shadow font-body-md text-body-md" placeholder="Cari artikel, topik, atau panduan..." type="text"/>
+</div>
+<!-- Category Filters -->
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-5 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md transition-all shadow-sm">Semua Topik</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-secondary hover:text-secondary font-label-md text-label-md transition-all">Bookkeeping Dasar</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-secondary hover:text-secondary font-label-md text-label-md transition-all">Manajemen Arus Kas</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-secondary hover:text-secondary font-label-md text-label-md transition-all">Perencanaan Pajak</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-secondary hover:text-secondary font-label-md text-label-md transition-all">Strategi Pendanaan</button>
+</div>
+</section>
+<!-- Featured Article (Bento Style Span 2) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
+<article class="col-span-1 md:col-span-2 bg-surface-container-lowest rounded-[24px] overflow-hidden ambient-shadow flex flex-col md:flex-row group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="md:w-1/2 h-64 md:h-auto bg-surface-container overflow-hidden relative">
+<img alt="Featured Post" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A modern, high-quality editorial photograph illustrating financial strategy. The scene shows a clean, organized desk with financial charts displayed on a modern tablet, alongside a sleek pen and a cup of coffee. Soft, diffused daylight filters through a window, highlighting a color palette of pristine whites, soft grays, and professional navy tones. The overall aesthetic perfectly matches a soft-minimalist, reliable corporate financial advisory brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCegTa3dBHO2hJtScfwaO86rXmKK-jGPuRxu1aT98sYV1WCd4Z4B9Xbi80T8V4xHjsIhXD-AvvA05u_eJM1dt2PplwtdRTZNfBtKi7qSFJw2sEJnQQlhpg6z5SY9CIw7NVTecrG2yT3OCYvkkdKlOauI0xBMRi8wBxAidpHJCeBs3Mbij1TtyX3GMSzJx5RZWIPZ5BLqo00b3xNBTz4Rcngi54KhV4bUB70dTgq-JZ2SjAukhprFJqUBMMPbNzbX2N02-8vZvVP8fYS"/>
+</div>
+<div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md text-xs">Strategi Pendanaan</span>
+<span class="text-on-surface-variant font-label-md text-label-md text-sm">5 Menit Membaca</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 group-hover:text-secondary transition-colors">
+                        Membangun Laporan Keuangan yang Menarik Perhatian Investor
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                        Bagi UMKM yang ingin naik kelas, laporan keuangan bukan sekadar kewajiban administratif, melainkan alat komunikasi utama dengan calon investor. Pelajari komponen kunci yang selalu dicari oleh pemodal ventura.
+                    </p>
+<a class="font-label-md text-label-md text-secondary flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                        Baca Selengkapnya
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Standard Articles Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img alt="Blog Post 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A clean, modern image showing hands typing on a sleek silver laptop keyboard next to a minimalist calculator and a blank notebook. The lighting is bright and airy, casting soft ambient shadows. The colors focus on bright whites, soft grays, and subtle natural tones, conveying a sense of approachable professionalism and accurate bookkeeping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDACB1A-0Qq3dUQrj4LtFek3M2FcNgvP1NQJ_DnrWSoTjFEINj3-MCIX_diDyUjEjEwfhfKzxKnxkGMRkU9a8_ziSKTOjgLRuj-BRgmH2yhSze3GIF2H4G6IaiU4wBudldXbWbTSCphft8QWQx4Wa5bPEa-TG8IAvUiI5E2Z-xQz_cUA0i1PZhmSjjueXXQSaY2dV_0LFmgPUZvR0Se52eywD6Rp9KCBLnYzCwCqE82gpTa19Ni5MYC3Z7wIkTu8n6SvItqwVUtrxND"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Bookkeeping Dasar</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">5 Kesalahan Umum Pembukuan yang Sering Dilakukan UMKM</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Hindari jebakan pencatatan keuangan yang dapat merugikan arus kas bisnis kecil Anda di masa depan.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Okt 12, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img alt="Blog Post 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A bright, inviting scene of a small business owner reviewing financial documents at a neat cafe table. The environment is warm yet professional, featuring soft natural sunlight and minimalist decor. The color palette emphasizes light neutral tones with a hint of emerald green from a nearby plant, reflecting the concept of cash flow management in a modern SME." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMRYqmlvCJc8NwJC-Gs6HQYrzae2BtXM9LyqDspgnYSWBlqA-RqqVPLPXyM1jxZk-wJJGVmxccurDDBrRndPTOwTWaqHg-I64mYnfYdih6PJ2zBH7SrdaZbVLhtZua9U6UUT9UZ5DGkN1GHAWYXAujiKN3J4lU-5r-ApP975LKLrrD53Z5IShEIVy8K01OWEACAdF78lE8aK35a9JSwXMGDqqN6Kf3Ciqst8Uv7rKsoXfRn0OhOaDPz03yrjuqVp0vQUMPPvzuzWoe"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Manajemen Arus Kas</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Strategi Manajemen Arus Kas untuk Bertahan di Masa Krisis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Teknik praktis mempertahankan likuiditas saat penjualan menurun atau ketidakpastian ekonomi melanda.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Okt 05, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img alt="Blog Post 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A macro shot of a sleek modern calculator resting on detailed financial reports, with a minimalist pen lying nearby. The composition uses generous whitespace and a high-key lighting setup to create a soft-minimalist aesthetic. The tones are predominantly white and soft gray, perfectly aligned with a professional, stress-free approach to tax planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9hGFfJ7I-OHsJv4L-7-euj8-qUTQJ6zX-pdAa33WItfQEM-oUZYVV7G0onwnGvz1w_gVQ-kGasO9AQYm3AT1l36XG5Jmr9pMF0AlU9x4McmL3nYfJBf6ciIHDgzMZzW9BFv0BVKLeH0-xPSy2uBtph0p7Zo3X_JGY5gPx_wIOYvCb-FBsVx4nEbFkj0qhOBaujEf-AftqP22P56gJ5qhDJhpiD6v78v6ATLPOCuEqHB3d3bBgAIW6F4IwdeaYvHw1lVARWHmqvKP9"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Perencanaan Pajak</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Panduan Lengkap Perencanaan Pajak Akhir Tahun</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Langkah-langkah legal dan efisien untuk mengoptimalkan kewajiban pajak bisnis Anda sebelum tutup buku.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Sep 28, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low">
+<span class="material-symbols-outlined text-6xl text-primary-fixed-dim" style="font-variation-settings: 'wght' 200;">domain_add</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Strategi Pendanaan</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Cara Mendapatkan Pendanaan Modal Ventura untuk Startup Anda</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Persiapkan pitch deck dan metriks keuangan yang tepat untuk memikat hati investor institusional.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Sep 15, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low">
+<span class="material-symbols-outlined text-6xl text-primary-fixed-dim" style="font-variation-settings: 'wght' 200;">account_balance_wallet</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Bookkeeping Dasar</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Mengapa Pisahkan Rekening Pribadi dan Bisnis Itu Wajib?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Langkah pertama menuju profesionalisme finansial dan kemudahan pelacakan aset perusahaan.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Sep 02, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low">
+<span class="material-symbols-outlined text-6xl text-primary-fixed-dim" style="font-variation-settings: 'wght' 200;">handshake</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Manajemen Arus Kas</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Tips Negosiasi Termin Pembayaran dengan Pemasok</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Perpanjang napas kas Anda tanpa merusak hubungan baik dengan vendor utama.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Agt 20, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden ambient-shadow flex flex-col group ambient-shadow-hover transition-all duration-300 border border-surface-variant">
+<div class="h-48 overflow-hidden relative bg-surface-container flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-low">
+<span class="material-symbols-outlined text-6xl text-primary-fixed-dim" style="font-variation-settings: 'wght' 200;">request_quote</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3 text-sm">Perencanaan Pajak</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 group-hover:text-secondary transition-colors line-clamp-2">Insentif Pajak UMKM yang Wajib Anda Manfaatkan di 2024</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2 flex-grow">Daftar lengkap fasilitas perpajakan dari pemerintah untuk meringankan beban operasional UMKM.</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-surface-variant">
+<span class="text-on-surface-variant text-sm">Agt 11, 2024</span>
+<a class="text-secondary flex items-center" href="#"><span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-16">
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">arrow_back</span></button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-on-secondary font-label-md text-label-md shadow-sm">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors font-label-md text-label-md">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors font-label-md text-label-md">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+</main>
+<!-- BottomNavBar / FAB (Shared Component) -->
+<a class="fixed bottom-8 right-8 z-50 flex items-center justify-center bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container rounded-full w-16 h-16 shadow-xl hover:scale-110 transition-transform duration-300 group" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<!-- Tooltip -->
+<span class="absolute right-full mr-4 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-lg font-label-md text-label-md text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-sm">Chat with an Expert</span>
+</a>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-16 px-gutter bg-surface-container-highest dark:bg-surface-container text-primary dark:text-inverse-primary font-body-md text-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface flex items-center gap-3"><img alt="Valuintcorp Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>Valuintcorp</div>
+<p class="text-on-surface-variant dark:text-outline mt-4">Mitra terpercaya UMKM Indonesia untuk pertumbuhan finansial yang sehat dan berkelanjutan bersama Valuintcorp.</p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-2">Legal</h4>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-2">Kontak</h4>
+<span class="text-on-surface-variant dark:text-outline">Email: info@valuintcorp.com</span>
+<span class="text-on-surface-variant dark:text-outline">WhatsApp: +62 812-3456-7890</span>
+<span class="text-on-surface-variant dark:text-outline">Lokasi: Indonesia</span>
+</div>
+<!-- Social Column -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-on-surface font-bold mb-2">Sosial Media</h4>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">LinkedIn</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">TikTok</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant/30 text-center text-on-surface-variant dark:text-outline">© 2024 Valuintcorp. All Rights Reserved.</div>
+</footer>
+<!-- Header Scroll Effect -->
+<script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ | Valuintcorp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary": "#000000",
+                "surface-container-high": "#E5E7EB",
+                "surface-dim": "#E2E8F0",
+                "on-primary-fixed": "#0F172A",
+                "inverse-primary": "#CBD5E1",
+                "primary-fixed-dim": "#CBD5E1",
+                "on-primary-fixed-variant": "#334155",
+                "surface-variant": "#E2E8F0",
+                "on-secondary-fixed": "#064E3B",
+                "tertiary-fixed": "#fcdeb5",
+                "error": "#ba1a1a",
+                "surface": "#F8FAF9",
+                "inverse-surface": "#0F172A",
+                "surface-container-highest": "#D1D5DB",
+                "primary-fixed": "#E2E8F0",
+                "primary": "#0F172A",
+                "on-error": "#ffffff",
+                "secondary-fixed": "#34D399",
+                "on-error-container": "#93000a",
+                "background": "#F8FAF9",
+                "error-container": "#ffdad6",
+                "secondary-fixed-dim": "#10B981",
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "surface-container": "#F1F5F9",
+                "on-primary-container": "#64748B",
+                "surface-tint": "#64748B",
+                "on-secondary-container": "#065F46",
+                "on-surface": "#1E293B",
+                "tertiary-fixed-dim": "#dec29a",
+                "on-tertiary": "#ffffff",
+                "tertiary-container": "#271901",
+                "primary-container": "#0F172A",
+                "on-tertiary-fixed": "#271901",
+                "surface-bright": "#F8FAF9",
+                "outline-variant": "#E2E8F0",
+                "on-tertiary-fixed-variant": "#574425",
+                "on-secondary-fixed-variant": "#047857",
+                "inverse-on-surface": "#F8FAF9",
+                "on-background": "#1E293B",
+                "secondary": "#10B981",
+                "on-surface-variant": "#475569",
+                "outline": "#94A3B8",
+                "surface-container-low": "#F3F4F6",
+                "secondary-container": "#D1FAE5",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-container": "#98805d"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "xl": "64px",
+                "margin-mobile": "16px",
+                "margin-desktop": "48px",
+                "md": "24px",
+                "gutter": "24px",
+                "sm": "12px",
+                "base": "8px",
+                "xs": "4px",
+                "lg": "40px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "display-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-sm": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "label-md": [
+                        "Plus Jakarta Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Arbitrary large enough height */
+            padding-bottom: 24px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm dark:bg-inverse-surface">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Valuintcorp Logo" class="h-10 w-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>
+<span class="font-headline-md text-on-surface font-bold hidden sm:inline-block">Valuintcorp</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200 font-body-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200 font-body-md text-label-md" href="#">Layanan</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200 font-body-md text-label-md" href="#">Paket Harga</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200 font-body-md text-label-md" href="#">Tentang Kami</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200 font-body-md text-label-md" href="#">Insight</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 opacity-80 transition-all font-body-md text-label-md" href="#">FAQ</a>
+</nav>
+<div class="hidden md:block">
+<a class="inline-flex items-center justify-center px-6 py-3 text-secondary border border-secondary font-label-md text-label-md rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-200" href="http://localhost:3000/login">
+                    Login
+                </a>
+</div>
+<button class="md:hidden text-on-surface dark:text-inverse-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-32 pb-margin-desktop px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="text-center mb-16 md:mb-24 max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6">Pertanyaan yang Sering Diajukan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Temukan jawaban cepat untuk pertanyaan umum mengenai layanan konsultasi dan pendekatan kami untuk membantu pertumbuhan bisnis UKM Anda.
+            </p>
+</section>
+<!-- FAQ Accordion List -->
+<section class="max-w-4xl mx-auto space-y-4">
+<!-- Item 1 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Apa itu Valuintcorp?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">Valuintcorp adalah layanan konsultasi keuangan dan manajemen strategis yang didedikasikan secara khusus untuk memberdayakan dan mempercepat pertumbuhan Usaha Kecil dan Menengah (UKM) di Indonesia melalui pendekatan yang profesional, terukur, dan aplikatif.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Layanan utama apa saja yang ditawarkan?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Fokus utama kami mencakup Perencanaan Keuangan Strategis, Analisis Kelayakan Bisnis, Optimalisasi Arus Kas (Cash Flow), Valuasi Bisnis, dan Restrukturisasi Keuangan untuk membantu perusahaan menghadapi tantangan pasar.
+                    </p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Siapa yang paling diuntungkan dari layanan ini?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Layanan kami dirancang secara spesifik untuk pemilik UMKM, pendiri startup tahap awal hingga berkembang, serta perusahaan keluarga yang ingin merapikan struktur keuangan mereka atau bersiap untuk mencari pendanaan eksternal.
+                    </p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Bagaimana struktur biaya konsultasinya?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Kami mengadopsi model penetapan harga yang transparan. Biaya disesuaikan dengan skala kompleksitas proyek dan durasi pendampingan. Anda dapat melihat estimasi pada halaman "Paket Harga" atau menghubungi kami untuk penawaran khusus.
+                    </p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Apakah tersedia sesi konsultasi awal tanpa biaya?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Ya, kami menyediakan Sesi Penilaian Awal secara gratis (30-45 menit). Sesi ini digunakan untuk mendiagnosis masalah utama bisnis Anda dan menentukan apakah layanan kami adalah solusi yang tepat sebelum adanya komitmen finansial.
+                    </p>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Bagaimana langkah pertama untuk memulai?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Langkah termudah adalah mengklik tombol "Konsultasi Gratis" di pojok kanan atas layar Anda atau menggunakan fitur "Chat with an Expert" di sudut bawah. Tim representatif kami akan segera mengatur jadwal pertemuan dengan Anda.
+                    </p>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Berapa lama rata-rata proses pendampingan berlangsung?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Durasi sangat bergantung pada ruang lingkup pekerjaan. Proyek audit cepat bisa selesai dalam 2-4 minggu, sementara restrukturisasi penuh atau persiapan pendanaan dapat memakan waktu 3 hingga 6 bulan pendampingan intensif.
+                    </p>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Bagaimana Anda menjamin kerahasiaan data perusahaan saya?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Keamanan dan privasi data klien adalah prioritas mutlak. Sebelum pertukaran data sensitif apa pun terjadi, kami selalu menerbitkan dan menandatangani Perjanjian Kerahasiaan (Non-Disclosure Agreement/NDA) yang mengikat secara hukum.
+                    </p>
+</div>
+</div>
+<!-- Item 9 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Apakah Anda melayani klien di luar wilayah Jakarta?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Tentu saja. Meskipun kantor pusat kami berada di Jakarta, kami memiliki infrastruktur konsultasi digital yang kuat, memungkinkan kami melayani dan mendampingi klien UMKM dari seluruh penjuru Nusantara secara efektif secara daring.
+                    </p>
+</div>
+</div>
+<!-- Item 10 -->
+<div class="accordion-item bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(15,23,42,0.05)] border border-transparent hover:border-surface-variant transition-all duration-300">
+<button aria-expanded="false" class="w-full text-left px-6 py-6 flex justify-between items-center focus:outline-none">
+<span class="font-headline-md text-headline-md text-on-surface pr-8">Apakah hasil analisis dijamin akan meningkatkan laba?</span>
+<span class="material-symbols-outlined text-outline accordion-icon">expand_more</span>
+</button>
+<div class="accordion-content px-6 bg-surface-container-low rounded-b-xl">
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+                        Meskipun kami tidak dapat memberikan jaminan absolut terhadap kondisi pasar eksternal, kami menjamin bahwa strategi dan infrastruktur keuangan yang kami bangun didasarkan pada data faktual dan praktik terbaik industri, yang secara signifikan memitigasi risiko dan mengoptimalkan potensi profitabilitas.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (FAB) -->
+<div class="fixed bottom-8 right-8 rounded-full w-16 h-16 bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container shadow-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer z-50 group">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" style="font-variation-settings: 'FILL' 1;">chat</span>
+<!-- Tooltip -->
+<div class="absolute right-full mr-4 bg-surface-container-lowest text-on-surface font-label-md text-label-md px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+            Chat with an Expert
+        </div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-16 px-gutter bg-surface-container-highest dark:bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="mb-4 flex items-center gap-3">
+<img alt="Valuintcorp Logo" class="h-10 w-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxK-31h5FG9XZ7TYKAz8XzFfzZi4ZP-F2WmCYQQK2-j2xe5irryKlHc0WLvkZsx7wenXglxVxuh9m2N2j_zTVP7LsVh88Eoil2CtNPXyd2cbsOKRwL06vs3tKxNDeBEtD19wTeCtQM6uGcW2HD4f1jthIcA6faD5VfAEk_3RGDqveOsJgdpIU5B0yIMhoGI9iQwW4mKL3pwnn3YJN8T7kyJ9wJAHjTCL4Xc00SGOAEjej1cSUHBcS99WpX8b0tIUu-H0rVj8jrUvm"/>
+<span class="font-headline-md text-on-surface font-bold">Valuintcorp</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline mb-6 max-w-md">
+                    Mitra strategis terpercaya Anda dalam membangun fondasi keuangan yang tangguh dan berkelanjutan untuk bisnis skala menengah dan berkembang.
+                </p>
+<div class="font-body-md text-body-md text-on-surface-variant dark:text-outline mt-8">© 2024 Valuintcorp. All Rights Reserved.</div>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Email: info@valuintcorp.com</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">WhatsApp: +62 812-3456-7890</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Lokasi: Indonesia</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline hover:text-secondary transition-colors duration-200" href="#">TikTok</a>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.accordion-item');
+
+            accordions.forEach(accordion => {
+                const button = accordion.querySelector('button');
+                
+                button.addEventListener('click', () => {
+                    // Close all other accordions (optional, but good for clean UX)
+                    accordions.forEach(item => {
+                        if (item !== accordion) {
+                            item.classList.remove('active');
+                            item.querySelector('button').setAttribute('aria-expanded', 'false');
+                            item.classList.remove('bg-surface-container-low');
+                            item.classList.add('bg-surface-container-lowest');
+                        }
+                    });
+
+                    // Toggle current accordion
+                    accordion.classList.toggle('active');
+                    const isActive = accordion.classList.contains('active');
+                    button.setAttribute('aria-expanded', isActive);
+                    
+                    // Subtle background shift for active state as per specs
+                    if (isActive) {
+                        accordion.classList.remove('bg-surface-container-lowest');
+                        accordion.classList.add('bg-surface-container-low');
+                    } else {
+                        accordion.classList.remove('bg-surface-container-low');
+                        accordion.classList.add('bg-surface-container-lowest');
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>
