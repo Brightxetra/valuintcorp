@@ -19,8 +19,8 @@ export function Footer() {
         {/* Quick Links */}
         <div className="col-span-1 flex flex-col gap-3">
           <h4 className="text-sm text-on-surface font-bold uppercase tracking-wider mb-2">Legal</h4>
-          <Link href="#" className="text-on-surface-variant hover:text-secondary transition-colors duration-200">Kebijakan Privasi</Link>
-          <Link href="#" className="text-on-surface-variant hover:text-secondary transition-colors duration-200">Syarat & Ketentuan</Link>
+          <Link href="/kebijakan-privasi" className="text-on-surface-variant hover:text-secondary transition-colors duration-200">Kebijakan Privasi</Link>
+          <Link href="/syarat-ketentuan" className="text-on-surface-variant hover:text-secondary transition-colors duration-200">Syarat & Ketentuan</Link>
         </div>
 
         {/* Contact Info */}
