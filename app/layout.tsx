@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -48,6 +50,8 @@ export default function RootLayout({
             Chat dengan Valuintcorp
           </span>
         </a>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
